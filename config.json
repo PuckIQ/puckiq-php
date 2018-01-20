@@ -1,0 +1,12 @@
+{
+    "site": {
+        "title": "PuckIQ",
+        "author": "PuckIQ Team <info@puckiq.com>",
+        "description": "Hockey Analytics",
+        "skin": "skin-green"
+    },
+    "api": {
+        "host": "locahost:3001",
+        "base": "puckiq"
+    }
+}
