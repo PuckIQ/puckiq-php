@@ -6,6 +6,8 @@
   $jsonIterator = new RecursiveIteratorIterator(
     new RecursiveArrayIterator(json_decode($json, TRUE)),
     RecursiveIteratorIterator::SELF_FIRST);
+  
+  var_dump($jsonIterator);
 ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
