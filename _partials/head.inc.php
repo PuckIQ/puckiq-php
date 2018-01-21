@@ -1,5 +1,7 @@
 <?php
-  $json = file_get_contents("../config.json");
+  $fh = fopen('config.json','r');
+  $json = fread($fh, filesize('config.json'));
+  fclose($fh);
   
   $jsonIterator = new RecursiveIteratorIterator(
     new RecursiveArrayIterator(json_decode($json, TRUE)),
