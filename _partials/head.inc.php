@@ -1,22 +1,17 @@
 <?php
-  $fh = fopen('config.json','r');
-  $json = fread($fh, filesize('config.json'));
-  fclose($fh);
-  
-  $jsonIterator = new RecursiveIteratorIterator(
-    new RecursiveArrayIterator(json_decode($json, TRUE)),
-    RecursiveIteratorIterator::SELF_FIRST);
-  
-  var_dump($jsonIterator);
+  $json = utf8_encode(file_get_contents('config.json'));
+  $config = json_decode($json);
+
+  var_dump($config);
 ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="description" content="<?php echo $jsonIterator->site->description; ?>">
-<meta name="author" content="<?php echo $jsonIterator->site->author; ?>">
+<meta name="description" content="<?php echo $config->site->description; ?>">
+<meta name="author" content="<?php echo $config->site->author; ?>">
 
 <title>
-  <?php echo $jsonIterator->site->title; ?>
+  <?php echo $config->site->title; ?>
 </title>
 
 <!-- Bootstrap 3.3.7 -->
