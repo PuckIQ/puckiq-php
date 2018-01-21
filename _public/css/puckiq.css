@@ -1,0 +1,31 @@
+.logo-mini img {
+  margin-top: -5px;
+  max-width: 60px;
+  max-height: 30px;
+}
+
+.logo-lg img {
+  margin-top: -5px;
+  max-width: 100px;
+  max-height: 50px;
+}
+
+td.pq-col-50, th.pq-col-50 {
+  vertical-align: top;
+  min-width: 50px;
+}
+
+td.pq-col-75, th.pq-col-75 {
+  vertical-align: top;
+  min-width: 75px;
+}
+
+td.pq-col-100, th.pq-col-100 {
+  vertical-align: top;
+  min-width: 100px;
+}
+
+td.pq-col-200, th.pq-col-200 {
+  vertical-align: top;
+  min-width: 200px;
+}

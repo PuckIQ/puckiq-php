@@ -1,18 +1,10 @@
-<?php
-  $json = utf8_encode(file_get_contents('config.json'));
-  $config = json_decode($json);
-
-  var_dump($config);
-?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="description" content="<?php echo $config->site->description; ?>">
-<meta name="author" content="<?php echo $config->site->author; ?>">
+<meta name="description" content="<?= $config->site->description; ?>">
+<meta name="author" content="<?= $config->site->author; ?>">
 
-<title>
-  <?php echo $config->site->title; ?>
-</title>
+<title><?= $config->site->title; ?></title>
 
 <!-- Bootstrap 3.3.7 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
