@@ -1,0 +1,9 @@
+# Logs
+logs
+*.log
+
+# Config Files
+config.json
+scratch
+/vendor/
+composer.lock

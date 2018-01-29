@@ -1,4 +1,5 @@
 <?php
+  global $config;
   $json = utf8_encode(file_get_contents('config.json'));
   $config = json_decode($json);
   $pagename = explode("?", basename($_SERVER['REQUEST_URI']))[0] != null ? explode("?", basename($_SERVER['REQUEST_URI']))[0] : 'index';
